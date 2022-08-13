@@ -2,6 +2,7 @@
 const gallery = document.getElementById("gallery");
 const popup = document.getElementById("popup");
 const selectedImage = document.getElementById("selectedImage");
+const backButton = document.querySelector(".portfolio-btn");
 const imageIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const selectedIndex = null;
 
@@ -16,6 +17,7 @@ imageIndexes.forEach((index) => {
 
   image.addEventListener("click", () => {
     //popup stuff
+    backButton.style.visibility = "hidden";
     popup.style.transform = "translateY(0)";
     selectedImage.src = `/images/${index}.jpg`;
   });
@@ -25,6 +27,7 @@ imageIndexes.forEach((index) => {
 });
 
 popup.addEventListener("click", () => {
+  backButton.style.visibility = "";
   popup.style.transform = "translate(-100%)";
   popup.src = "";
   popup.alt = "";
