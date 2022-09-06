@@ -11,7 +11,7 @@ imageIndexes.forEach((index) => {
   immageDiv.classList.add("imageContainer");
 
   const image = document.createElement("img");
-  image.src = `/images/${index}.jpg`;
+  image.src = `./images/${index}.jpg`;
   image.alt = `Sport photo ${index}`;
   image.classList.add("galleryImg");
 
@@ -19,7 +19,7 @@ imageIndexes.forEach((index) => {
     //popup stuff
     backButton.style.visibility = "hidden";
     popup.style.transform = "translateY(0)";
-    selectedImage.src = `/images/${index}.jpg`;
+    selectedImage.src = `./images/${index}.jpg`;
   });
 
   immageDiv.appendChild(image);
